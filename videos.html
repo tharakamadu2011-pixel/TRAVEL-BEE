@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | Travel Bee</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f59e0b',
+              'primary-dark': '#d97706',
+              darkbg: '#0f172a',
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkbg text-slate-50 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 glass text-white border-b border-white/5">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-plane-up text-3xl text-primary group-hover:text-white transition-colors"></i>
+                <span class="font-bold text-2xl tracking-widest font-playfair uppercase">Travel Bee</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link text-sm uppercase tracking-wide font-semibold">Home</a>
+                <a href="destinations.html" class="nav-link text-sm uppercase tracking-wide font-semibold">Destinations</a>
+                <a href="videos.html" class="nav-link text-sm uppercase tracking-wide font-semibold active">Videos</a>
+                <a href="about.html" class="nav-link text-sm uppercase tracking-wide font-semibold">About Me</a>
+                <a href="contact.html" class="btn-primary text-sm uppercase tracking-wide px-6 py-2 ml-4">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none hover:text-primary transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-darkbg/95 backdrop-blur-md border-b border-white/10 flex flex-col items-center py-6 space-y-6 shadow-2xl">
+            <a href="index.html" class="text-lg font-semibold hover:text-primary transition-colors">Home</a>
+            <a href="destinations.html" class="text-lg font-semibold hover:text-primary transition-colors">Destinations</a>
+            <a href="videos.html" class="text-lg font-semibold text-primary transition-colors">Videos</a>
+            <a href="about.html" class="text-lg font-semibold hover:text-primary transition-colors">About Me</a>
+            <a href="contact.html" class="text-lg font-semibold text-primary border border-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-20 text-center relative">
+        <div class="absolute inset-0 bg-primary/5 -z-10"></div>
+        <div class="container mx-auto px-6 animate-fade-in relative z-10">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold mb-4 drop-shadow-md">Watch & <span class="heading-highlight">Experience</span></h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg">Follow my journey across multiple platforms. Cinematic vlogs, quick shorts, and live feeds.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container mx-auto px-6 md:px-12 pb-32">
+        
+        <!-- Platform Selection Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 reveal opacity-0 transition-opacity duration-1000">
+            <!-- YouTube -->
+            <a href="#youtube" class="glass-card rounded-2xl p-6 text-center group">
+                <div class="w-16 h-16 mx-auto rounded-full yt-gradient flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-500/20">
+                    <i class="fa-brands fa-youtube text-white"></i>
+                </div>
+                <h3 class="font-bold text-lg">YouTube</h3>
+                <span class="text-slate-400 text-sm">Vlogs & Cinematics</span>
+            </a>
+            
+            <!-- Instagram -->
+            <a href="#instagram" class="glass-card rounded-2xl p-6 text-center group">
+                <div class="w-16 h-16 mx-auto rounded-full ig-gradient flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-pink-500/20">
+                    <i class="fa-brands fa-instagram text-white"></i>
+                </div>
+                <h3 class="font-bold text-lg">Instagram</h3>
+                <span class="text-slate-400 text-sm">Reels & Photos</span>
+            </a>
+
+            <!-- TikTok -->
+            <a href="#tiktok" class="glass-card rounded-2xl p-6 text-center group">
+                <div class="w-16 h-16 mx-auto rounded-full tk-gradient flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-cyan-500/20">
+                    <i class="fa-brands fa-tiktok text-white"></i>
+                </div>
+                <h3 class="font-bold text-lg">TikTok</h3>
+                <span class="text-slate-400 text-sm">Trends & Shorts</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#facebook" class="glass-card rounded-2xl p-6 text-center group">
+                <div class="w-16 h-16 mx-auto rounded-full fb-gradient flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
+                    <i class="fa-brands fa-facebook-f text-white"></i>
+                </div>
+                <h3 class="font-bold text-lg">Facebook</h3>
+                <span class="text-slate-400 text-sm">Live & Updates</span>
+            </a>
+        </div>
+
+        <!-- Video Gallery Grid -->
+        <div class="mb-8 flex items-center justify-between reveal opacity-0 transition-opacity duration-1000">
+            <h2 class="text-3xl font-playfair font-bold">Latest <span class="text-primary">Uploads</span></h2>
+            <div class="flex gap-2">
+                <button class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal opacity-0 transition-opacity duration-1000 delay-100">
+            <!-- Video Item -->
+            <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
+                <div class="relative aspect-video overflow-hidden">
+                    <img src="assets/beach.png" alt="Video thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Play icon overlay -->
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center text-white text-2xl shadow-xl transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </div>
+                    <div class="absolute bottom-3 right-3 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                        12:45
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">Maldives: The Ultimate Travel Guide 2026</h3>
+                    <p class="text-slate-400 text-sm">50K views &bull; 2 days ago</p>
+                </div>
+            </div>
+
+            <!-- Video Item -->
+            <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
+                <div class="relative aspect-[9/16] overflow-hidden lg:aspect-video">
+                    <img src="assets/city.png" alt="Video thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center text-white text-2xl shadow-xl transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                        <i class="fa-brands fa-instagram"></i> Reel
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">Lost in Tokyo Neon Lights 🚦🌆</h3>
+                    <p class="text-slate-400 text-sm">120K views &bull; 5 days ago</p>
+                </div>
+            </div>
+
+            <!-- Video Item -->
+            <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer relative">
+                <div class="relative aspect-[9/16] overflow-hidden lg:aspect-video">
+                    <img src="assets/hero_bg.png" alt="Video thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-center">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center text-white text-2xl shadow-xl transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-black text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                        <i class="fa-brands fa-tiktok text-cyan-400"></i> TikTok
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">Wait for the drop... Epic Mountain View 🏔️</h3>
+                    <p class="text-slate-400 text-sm">2M views &bull; 1 week ago</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-white/5 py-12 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-playfair font-bold uppercase tracking-widest text-white mb-6">Travel <span class="text-primary">Bee</span></h2>
+            <div class="flex justify-center gap-6 mb-8 mt-4">
+                <a href="#" class="text-slate-400 hover:text-[#ff0000] text-2xl transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-slate-400 hover:text-[#E1306C] text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white text-2xl transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="text-slate-400 hover:text-[#1877F2] text-2xl transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Travel Bee. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

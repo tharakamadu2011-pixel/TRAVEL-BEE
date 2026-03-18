@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bee | Exceptional Journeys</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f59e0b',
+              'primary-dark': '#d97706',
+              darkbg: '#0f172a',
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkbg text-slate-50 antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent border-b border-white/5">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i class="fa-solid fa-plane-up text-3xl text-primary group-hover:text-white transition-colors"></i>
+                <span class="font-bold text-2xl tracking-widest font-playfair uppercase">Travel Bee</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link text-sm uppercase tracking-wide font-semibold active">Home</a>
+                <a href="destinations.html" class="nav-link text-sm uppercase tracking-wide font-semibold">Destinations</a>
+                <a href="videos.html" class="nav-link text-sm uppercase tracking-wide font-semibold">Videos</a>
+                <a href="about.html" class="nav-link text-sm uppercase tracking-wide font-semibold">About Me</a>
+                <a href="contact.html" class="btn-primary text-sm uppercase tracking-wide px-6 py-2 ml-4">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none text-white hover:text-primary transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-darkbg/95 backdrop-blur-md border-b border-white/10 flex flex-col items-center py-6 space-y-6 shadow-2xl">
+            <a href="index.html" class="text-lg font-semibold text-primary">Home</a>
+            <a href="destinations.html" class="text-lg font-semibold hover:text-primary transition-colors">Destinations</a>
+            <a href="videos.html" class="text-lg font-semibold hover:text-primary transition-colors">Videos</a>
+            <a href="about.html" class="text-lg font-semibold hover:text-primary transition-colors">About Me</a>
+            <a href="contact.html" class="text-lg font-semibold text-primary border border-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero_bg.png" alt="Travel Bee Hero Background" class="w-full h-full object-cover object-center scale-105 animate-[pulse_20s_infinite_alternate]" />
+            <div class="absolute inset-0 bg-gradient-to-b from-darkbg/30 via-darkbg/60 to-darkbg"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl animate-fade-in mt-16">
+            <span class="text-primary font-semibold tracking-[0.2em] uppercase text-sm md:text-base mb-4 block">Wander The World With</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 drop-shadow-2xl">
+                Travel <span class="text-primary">Bee</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Join my journey across breathtaking landscapes, vibrant cities, and hidden paradises. Experience the world through my lens.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#explore" class="btn-primary">
+                    <i class="fa-solid fa-compass mr-2"></i> Start Exploring
+                </a>
+                <a href="videos.html" class="px-8 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white hover:text-darkbg transition-colors flex items-center justify-center">
+                    <i class="fa-solid fa-play mr-2"></i> Watch Latest Vlogs
+                </a>
+            </div>
+            
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-6 mt-12 animate-fade-in delay-200">
+                <a href="#" class="w-12 h-12 rounded-full yt-gradient flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full ig-gradient flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full tk-gradient flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full fb-gradient flex items-center justify-center text-xl shadow-lg hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#explore" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/50 hover:text-primary transition-colors animate-bounce">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main id="explore" class="pt-24 pb-20">
+        
+        <!-- About Summary Section -->
+        <section class="container mx-auto px-6 md:px-12 mb-32 reveal opacity-0 transition-opacity duration-1000">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="absolute inset-0 bg-primary/20 translate-x-4 translate-y-4 rounded-xl -z-10"></div>
+                        <img src="assets/creator.png" alt="Travel Creator" class="rounded-xl shadow-2xl w-full object-cover aspect-[4/5]" />
+                    </div>
+                </div>
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Discover My Story</span>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mt-4 mb-6">Chasing Horizons & <br><span class="heading-highlight">Creating Memories</span></h2>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                        I am your friendly neighborhood Travel Bee, buzzing around the globe to capture the essence of magnificent destinations. Whether it's a serene tropical beach, a bustling city at night, or epic mountain peaks, I document every step to inspire your next adventure.
+                    </p>
+                    <a href="about.html" class="inline-flex items-center text-primary font-bold hover:text-white transition-colors group">
+                        Read Full Story 
+                        <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations -->
+        <section class="container mx-auto px-6 md:px-12 mb-32 reveal opacity-0 transition-opacity duration-1000 delay-100">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Top Picks</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mt-2">Latest <span class="heading-highlight">Destinations</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <a href="destinations.html" class="block group relative overflow-hidden rounded-2xl glass-card h-80">
+                    <img src="assets/beach.png" alt="Tropical Paradise" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkbg via-darkbg/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3 inline-block">Tropical</span>
+                        <h3 class="text-2xl font-playfair font-bold text-white mb-2">The Hidden Paradise Beach</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Crystal clear waters and golden sands. Explore the ultimate relaxing getaway.</p>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="destinations.html" class="block group relative overflow-hidden rounded-2xl glass-card h-80">
+                    <img src="assets/city.png" alt="Cyberpunk City" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkbg via-darkbg/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span class="bg-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3 inline-block">Urban</span>
+                        <h3 class="text-2xl font-playfair font-bold text-white mb-2">Neon Lights & City Nights</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Dive into the vibrant, endless energy of the sleepless city streets.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="destinations.html" class="btn-outline">View All Destinations</a>
+            </div>
+        </section>
+
+        <!-- Social Videos Preview -->
+        <section class="container mx-auto px-6 md:px-12 reveal opacity-0 transition-opacity duration-1000 delay-200">
+            <div class="glass p-10 md:p-16 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+                
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-playfair font-bold mb-6">Catch the Action on <span class="text-primary">Social Media</span></h2>
+                    <p class="text-slate-300 mb-10 text-lg">
+                        I post daily vlogs, cinematic travel montages, and essential tips on YouTube, Facebook, TikTok, and Instagram. Don't miss out on the adventure!
+                    </p>
+                    <a href="videos.html" class="btn-primary">
+                        <i class="fa-solid fa-video mr-2"></i> Watch Travel Videos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-white/5 py-12 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-playfair font-bold uppercase tracking-widest text-white mb-6">Travel <span class="text-primary">Bee</span></h2>
+            <div class="flex justify-center gap-6 mb-8 mt-4">
+                <a href="#" class="text-slate-400 hover:text-[#ff0000] text-2xl transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-slate-400 hover:text-[#E1306C] text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white text-2xl transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="text-slate-400 hover:text-[#1877F2] text-2xl transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Travel Bee. All rights reserved. Built with passion for adventure.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
